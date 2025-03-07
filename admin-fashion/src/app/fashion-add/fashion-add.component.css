@@ -1,0 +1,107 @@
+/* 🔹 Container chính */
+.fashion-info {
+  width: 90%;
+  background: white;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* 🔹 Tiêu đề */
+h3 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Bảng nhập liệu */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  text-align: justify;
+}
+
+/* 🔹 Định dạng tiêu đề bên trái */
+.table td:first-child {
+  font-weight: bold;
+  color: #007bff;
+  width: 25%;
+  background: #f8f9fa;
+}
+
+/* 🔹 Định dạng input */
+input, quill-editor {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* 🔹 Định dạng hình ảnh */
+.preview-img {
+  max-width: 100px;
+  display: block;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Nhóm nút bấm */
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 🔹 Nút bấm */
+.btn {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.btn-save {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #218838;
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #c82333;
+}
+
+/* 🔹 Hộp lỗi */
+.error-message {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}

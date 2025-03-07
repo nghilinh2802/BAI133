@@ -1,0 +1,16 @@
+
+<div class="fashion-detail">
+    <button class="btn btn-back" (click)="goBack()">🔙 Back</button>
+    <h1 class="headline">{{ fashion?.fashion_subject }}</h1>
+
+    <div class="meta-info">
+        <span class="style-tag">🕶️ STYLE: {{ fashion?.style }}</span>
+        <span class="date-added">📅 {{ fashion?.created_at | date:'longDate' }}</span>
+    </div>
+
+    <img [src]="fashion?.fashion_image" alt="Fashion Image" class="featured-image">
+
+    <div class="article-content">
+        <p [innerHTML]="fashion?.fashion_detail"></p>
+    </div>
+</div>

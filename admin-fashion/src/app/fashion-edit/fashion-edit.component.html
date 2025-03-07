@@ -1,0 +1,42 @@
+<div class="edit-container">
+    <h2>📝 FASHION EDIT</h2>
+  
+    <form (ngSubmit)="updateFashion()">
+        <table border="1">
+            <tr>
+                <td><label for="fashion_subject">Fashion Subject:</label></td>
+                <td><input type="text" id="fashion_subject" [(ngModel)]="fashion.fashion_subject" name="fashion_subject" required /></td>
+            </tr>
+  
+            <tr>
+                <td><label for="style">Style:</label></td>
+                <td><input type="text" id="style" [(ngModel)]="fashion.style" name="style" required /></td>
+            </tr>
+  
+            <tr>
+                <td><label for="fashion_detail">Fashion detail:</label></td>
+                <td>
+                    <quill-editor [(ngModel)]="fashion.fashion_detail" name="fashion_detail" [modules]="quillConfig"></quill-editor>
+                </td>
+            </tr>
+  
+            <tr>
+                <td><label for="fashion_image">Image:</label></td>
+                <td>
+                    <input type="file" id="fashion_image" (change)="onFileSelected($event)" />
+                    <img *ngIf="fashion.fashion_image" [src]="fashion.fashion_image" width="200px" class="preview-img">
+                </td>
+            </tr>
+        </table>
+  
+        <div class="button-container">
+            <button type="submit" class="btn btn-save">💾 Save</button>
+            <button type="button" class="btn btn-cancel" (click)="router.navigate(['/fashion'])">🔙 Cancel</button>
+        </div>
+    </form>
+  
+    <div *ngIf="errMessage" class="error-message">
+        {{ errMessage }}
+    </div>
+  </div>
+  

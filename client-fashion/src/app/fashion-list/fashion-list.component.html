@@ -1,0 +1,23 @@
+<div class="fashion-container">
+  <h2>🌟 FASHION COLLECTION</h2>
+
+  <!-- 🔹 Bộ lọc Style -->
+  <div class="filter-container">
+    <label for="styleSelect">🔎 STYLE: </label>
+    <select [(ngModel)]="selectedStyle" (change)="filterByStyle()" class="style-dropdown">
+      <option value="">ALL</option>
+      <option *ngFor="let style of uniqueStyles" [value]="style">{{ style }}</option>
+    </select>
+  </div>
+
+  <!-- 🔹 Danh sách Fashion -->
+  <div class="fashion-grid">
+    <div *ngFor="let fashion of filteredFashions" class="fashion-card" (click)="viewDetail(fashion._id)">
+      <img [src]="fashion.fashion_image" alt="Fashion Image" class="thumbnail">
+      <div class="fashion-info">
+        <h3>{{ fashion.fashion_subject }}</h3>
+        <p><strong>STYLE: {{ fashion.style }}</strong></p>
+      </div>
+    </div>
+  </div>
+</div>

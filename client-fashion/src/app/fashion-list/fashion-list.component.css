@@ -1,0 +1,89 @@
+/* 🔹 Container chính */
+.fashion-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* 🔹 Tiêu đề */
+  h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    background-color: darkblue;
+    color: white;
+    padding: 15px;
+  }
+  
+  /* 🔹 Bộ lọc Style */
+  .filter-container {
+    margin-bottom: 20px;
+  }
+  .filter-container label{
+    font-size: 20px;  
+    font-weight: bold;
+
+}
+  
+  .style-dropdown {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid darkblue;
+    background: #fff;
+    cursor: pointer;
+    color: darkblue;
+    transition: 0.3s;
+    width: 40%;
+  }
+  
+  /* 🔹 Lưới hiển thị Fashion */
+  .fashion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  /* 🔹 Thẻ bài viết */
+  .fashion-card {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .fashion-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 🔹 Ảnh Thumbnail */
+  .thumbnail {
+    width: 100%;
+    /* height: 180px; */
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* 🔹 Thông tin Fashion */
+  .fashion-info {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .fashion-info h3 {
+    font-size: 18px;
+    color: #007bff;
+  }
+  
+  .fashion-info p {
+    font-size: 15px;
+    color: white;
+    background-color: darkblue;
+    padding: 20px;
+    margin-bottom: 0px;
+    border-radius: 8px;
+  }
+  

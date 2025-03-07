@@ -1,0 +1,142 @@
+/* 🔹 Cấu hình tổng quan */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  /* 🔹 Container chính */
+  .edit-container {
+    width: 90%;;
+    background: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* 🔹 Tiêu đề */
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* 🔹 Bảng chỉnh sửa */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    background: white;
+  }
+  
+  /* 🔹 Các hàng trong bảng */
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* 🔹 Các ô dữ liệu */
+  td {
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  /* 🔹 Cột tiêu đề bên trái */
+  td:first-child {
+    font-weight: bold;
+    color: #007bff;
+    width: 15%;
+    text-align: left;
+    /* padding-right: 10px; */
+    background: #f8f9fa;
+    padding-left: 20px;
+  }
+  
+  /* 🔹 Cột nhập liệu bên phải */
+  td:last-child {
+    width: 70%;
+  }
+  
+  /* 🔹 Các ô nhập liệu */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* 🔹 Trình chỉnh sửa Quill */
+  quill-editor {
+    width: 100%;
+    min-height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    background: white;
+  }
+  
+  /* 🔹 Hình ảnh xem trước */
+  .preview-img {
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 🔹 Nhóm nút */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  /* 🔹 Nút lưu */
+  .btn-save {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  /* 🔹 Hover nút lưu */
+  .btn-save:hover {
+    background-color: #218838;
+  }
+  
+  /* 🔹 Nút hủy */
+  .btn-cancel {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  /* 🔹 Hover nút hủy */
+  .btn-cancel:hover {
+    background-color: #c82333;
+  }
+  
+  /* 🔹 Hiển thị lỗi */
+  .error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,48 @@
+<div class="fashion-info">
+    <h3>➕ ADD NEW FASHION</h3>
+  
+    <table class="table">
+      <tr>
+        <td><strong>Fashion Style:</strong></td>
+        <td>
+          <input type="text" class="form-control" id="style" placeholder="Nhập Style"
+                 [(ngModel)]="fashion.style" name="style" required />
+        </td>
+      </tr>
+  
+      <tr>
+        <td><strong>Fashion Subject:</strong></td>
+        <td>
+          <input type="text" class="form-control" id="fashion_subject" placeholder="Nhập Subject"
+                 [(ngModel)]="fashion.fashion_subject" name="fashion_subject" required />
+        </td>
+      </tr>
+  
+      <tr>
+        <td><strong>Fashion Detail:</strong></td>
+        <td>
+          <quill-editor [(ngModel)]="fashion.fashion_detail" name="fashion_detail"
+                        [modules]="quillConfig"></quill-editor>
+        </td>
+      </tr>
+  
+      <tr>
+        <td><strong>Fashion Image:</strong></td>
+        <td>
+          <input type="file" class="file-input" id="fashion_image"
+                 (change)="onFileSelected($event)" />
+          <img *ngIf="fashion.fashion_image" [src]="fashion.fashion_image" class="preview-img">
+        </td>
+      </tr>
+    </table>
+  
+    <div class="button-group">
+      <button (click)="postFashion()" class="btn btn-save">💾 Submit</button>
+      <button type="button" class="btn btn-cancel" (click)="goBack()">🔙 Cancel</button>
+    </div>
+  
+    <div *ngIf="errMessage" class="error-message">
+      {{ errMessage }}
+    </div>
+  </div>
+  

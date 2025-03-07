@@ -1,0 +1,33 @@
+<h1>📋 FASHION LIST</h1>
+
+<button [routerLink]="'/add-fashion'" class="btn btn-add">➕ Add New Fashion</button>
+
+<br/>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Fashion Subject</th>
+    <th>Style</th>
+    <th>Image</th>
+    <th>Action</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let fashion of fashions">
+      <td>{{ fashion._id }}</td>
+      <td>{{ fashion.fashion_subject }}</td>
+      <td>{{ fashion.style }}</td>
+      <td><img [src]="fashion.fashion_image" width="100px" height="100px"></td>
+      <td>
+        <button (click)="viewDetails(fashion._id)" class="btn btn-details">👀 Details</button>
+        <button [routerLink]="['/edit', fashion._id]" class="btn btn-edit">
+          ✏️ Edit</button>
+        <button (click)="deleteFashion(fashion._id)" class="btn btn-delete">❌ Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="errMessage" class="error-message">
+  {{ errMessage }}
+</div>
